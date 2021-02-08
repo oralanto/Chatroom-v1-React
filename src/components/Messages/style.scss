@@ -1,0 +1,10 @@
+.messages {
+  &__user {
+    margin: .5em;
+  }
+  &__message {
+    margin: .5em;
+    padding: 1em;
+    border: 2px solid lightgrey;
+  }
+}
