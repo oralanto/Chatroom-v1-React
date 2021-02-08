@@ -1,12 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const Messages = () => (
+const Message = ({ user, message }) => (
   <>
-    <li className="messages__user">Super Chat</li>
-    <li className="messages__message">Coucou toi</li>
+    <li className="messages__user">{user}</li>
+    <li className="messages__message">{message}</li>
   </>
 );
 
-export default Messages;
+Message.propTypes = {
+  user: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+};
+
+export default Message;
