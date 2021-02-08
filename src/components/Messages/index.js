@@ -7,7 +7,7 @@ import './style.scss';
 
 const Messages = ({ messages }) => (
   <ul className="messages">
-    {messages.map((message) => <Message user={message.user} message={message.message} />)}
+    {messages.map((message) => <Message message={message.message} />)}
   </ul>
 );
 
