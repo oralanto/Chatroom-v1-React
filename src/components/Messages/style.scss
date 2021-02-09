@@ -2,6 +2,7 @@
 
 .messages {
   padding: v.$gutter * 2;
+  overflow: auto;
   &__user {
     margin-bottom: v.$gutter;
     margin-left: v.$gutter * 1.5;
