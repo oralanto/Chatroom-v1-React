@@ -4,9 +4,9 @@ import getHighestId from 'src/selectors';
 const initialState = {
   messages: [
     {
-      id: '',
-      user: '',
-      message: '',
+      id: 1,
+      user: 'Super Chat',
+      message: 'Kikou',
     },
   ],
   newMessage: '',
