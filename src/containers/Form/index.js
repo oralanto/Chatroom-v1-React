@@ -14,8 +14,8 @@ const mapDispatchToProps = (dispatch) => ({
     const action = setInputValue(value);
     dispatch(action);
   },
-  onSubmitForm: () => {
-    const action = addMessage();
+  onSubmitForm: (value) => {
+    const action = addMessage(value);
     dispatch(action);
     console.log('je veux changer la value: ', action);
   },

@@ -1,21 +1,12 @@
 import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions';
+import getHighestId from 'src/selectors';
 
 const initialState = {
   messages: [
     {
-      id: 1,
-      user: 'Super Chat',
-      message: 'Kikou',
-    },
-    {
-      id: 2,
-      user: 'Super Chat',
-      message: 'Kikou',
-    },
-    {
-      id: 3,
-      user: 'Super Chat',
-      message: 'Kikou',
+      id: '',
+      user: '',
+      message: '',
     },
   ],
   newMessage: '',
@@ -30,9 +21,9 @@ const reducer = (state = initialState, action = {}) => {
       };
     case ADD_MESSAGE: {
       const message = {
-        id: 6,
+        id: getHighestId(state) + 1,
         user: 'Osée',
-        message: 'Coucou toitoitoitoti',
+        message: state.newMessage,
       };
       const messages = [...state.messages, message];
       return {

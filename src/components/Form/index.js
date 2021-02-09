@@ -9,8 +9,7 @@ const Form = ({ inputValue, onChangeInputValue, onSubmitForm }) => {
   };
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    onSubmitForm();
-    console.log('coucou');
+    if (inputValue) onSubmitForm(inputValue);
   };
   return (
     <form className="form" onSubmit={handleOnSubmit}>
