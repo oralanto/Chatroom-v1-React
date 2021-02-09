@@ -1,6 +1,6 @@
-export const NEW_MESSAGE = 'NEW_MESSAGE';
+export const SET_INPUT_VALUE = 'SET_INPUT_VALUE';
 
-export const newMessage = (messages) => ({
-  type: NEW_MESSAGE,
+export const setInputValue = (messages) => ({
+  type: SET_INPUT_VALUE,
   messages,
 });

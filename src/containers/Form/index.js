@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
 import Form from 'src/components/Form';
-import { newMessage } from 'src/actions';
+import { setInputValue } from 'src/actions';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  inputValue: state.newMessage,
+});
 
 // les props qui sont passées sur un container peuvent être récupérer
 // via le 2e paramètre des fonction mapStateToProps et mapDispatchToProps
 // par convention on les appelle ownProps, ce sera un objet
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onSubmitForm: () => {
-    const action = newMessage(ownProps.messages);
+  onChangeInputValue: () => {
+    const action = setInputValue(ownProps.messages);
     dispatch(action);
+    console.log('Je change la value');
   },
 });
 

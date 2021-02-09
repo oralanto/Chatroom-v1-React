@@ -18,6 +18,7 @@ const initialState = {
       message: 'Kikou',
     },
   ],
+  newMessage: '',
 };
 
 const reducer = (state = initialState, action = {}) => {
