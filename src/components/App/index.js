@@ -2,11 +2,11 @@
 import React from 'react';
 
 import Form from 'src/components/Form';
-
-import Messages from 'src/containers/Messages';
+import Messages from 'src/components/Messages';
+// import Messages from 'src/containers/Messages';
 
 // == Import
-import './styles.css';
+import './style.scss';
 
 // == Composant
 const App = () => (

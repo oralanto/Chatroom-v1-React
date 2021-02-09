@@ -13,6 +13,7 @@ const reducer = (state = initialState, action = {}) => {
       message: action.message,
     };
   }
+  return state;
 };
 
 export default reducer;

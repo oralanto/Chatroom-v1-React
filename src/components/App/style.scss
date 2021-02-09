@@ -1,0 +1,11 @@
+@use 'src/styles/vars' as v;
+
+.app {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  height: 100vh;
+  background-color: v.$color-alt;
+  display: flex;
+  flex-direction: column-reverse;
+}

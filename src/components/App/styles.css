@@ -1,8 +1,0 @@
-.app {
-  width: 70%;
-  margin: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column-reverse;
-  border: 1px solid #ccc;
-}

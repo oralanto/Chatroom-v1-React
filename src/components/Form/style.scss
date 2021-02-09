@@ -1,3 +1,18 @@
+@use 'src/styles/vars' as v;
+
 .form {
-  margin: .5em;
+  display: flex;
+  &__input {
+    padding: v.$gutter;
+    flex: 1;
+    font-size: 1.5em;
+    border: none;
+    &::placeholder {
+      opacity: .6;
+    }
+  }
+  &__button {
+    border: none;
+    width: 100px;
+  }
 }

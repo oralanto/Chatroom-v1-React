@@ -1,18 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import Message from './Message';
 
 import './style.scss';
 
-const Messages = ({ messages }) => (
+const Messages = () => (
   <ul className="messages">
-    {messages.map((message) => <Message message={message.message} />)}
+    {/* {messages.map((message) => <Message message={message.message} />)} */}
+    <Message />
+    <Message />
+    <Message />
+    <Message />
   </ul>
 );
 
-Messages.propTypes = {
-  messages: PropTypes.arrayOf.isRequired,
-};
+// Messages.propTypes = {
+//   messages: PropTypes.array.isRequired,
+// };
 
 export default Messages;
