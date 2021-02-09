@@ -9,14 +9,11 @@ const mapStateToProps = (state) => ({
 // les props qui sont passées sur un container peuvent être récupérer
 // via le 2e paramètre des fonction mapStateToProps et mapDispatchToProps
 // par convention on les appelle ownProps, ce sera un objet
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onChangeInputValue: () => {
-    const action = setInputValue(ownProps.messages);
+const mapDispatchToProps = (dispatch) => ({
+  onChangeInputValue: (value) => {
+    const action = setInputValue(value);
     dispatch(action);
-    console.log('Je change la value');
   },
 });
 
-const componentToConnect = connect(mapStateToProps, mapDispatchToProps);
-const connectedComponent = componentToConnect(Form);
-export default connectedComponent;
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
