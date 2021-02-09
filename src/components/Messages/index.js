@@ -1,22 +1,22 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Message from './Message';
 
 import './style.scss';
 
-const Messages = () => (
+const Messages = ({ messages }) => (
   <ul className="messages">
-    {/* {messages.map((message) => <Message message={message.message} />)} */}
-    <Message />
-    <Message />
-    <Message />
-    <Message />
+    {messages.map((message) => <Message key={message.id} {...message} />)}
   </ul>
 );
 
-// Messages.propTypes = {
-//   messages: PropTypes.array.isRequired,
-// };
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+    }),
+  ).isRequired,
+};
 
 export default Messages;

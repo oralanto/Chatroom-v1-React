@@ -1,19 +1,30 @@
 import NEW_MESSAGE from 'src/actions';
 
 const initialState = {
-  messages: '',
+  messages: [
+    {
+      id: 1,
+      user: 'Super Chat',
+      message: 'Kikou',
+    },
+    {
+      id: 2,
+      user: 'Super Chat',
+      message: 'Kikou',
+    },
+    {
+      id: 3,
+      user: 'Super Chat',
+      message: 'Kikou',
+    },
+  ],
 };
 
 const reducer = (state = initialState, action = {}) => {
-  console.log('state', state);
-
-  if (action.types === NEW_MESSAGE) {
-    return {
-      ...state,
-      message: action.message,
-    };
+  switch (action.type) {
+    default:
+      return state;
   }
-  return state;
 };
 
 export default reducer;

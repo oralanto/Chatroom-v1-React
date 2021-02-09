@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Messages from 'src/components/Messages';
 
 const mapStateToProps = (state) => ({
-  messages: state.message,
+  messages: state.messages,
 });
 const mapDispatchToProps = () => ({});
 
