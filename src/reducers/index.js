@@ -17,8 +17,8 @@ const initialState = {
   newMessage: '',
   open: true,
   user: {
-    email: 'toto@tata.com',
-    password: 'ouiouioui',
+    email: '',
+    password: '',
     pseudo: 'Unknow',
   },
 };
@@ -56,6 +56,14 @@ const reducer = (state = initialState, action = {}) => {
           [action.name]: action.value,
         },
       };
+    // case LOGIN:
+    //   return {
+    //     ...state,
+    //     user: {
+    //       ...state.user,
+    //       [action.name]: action.value,
+    //     },
+    //   };
     default:
       return state;
   }

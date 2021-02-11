@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { connect } from 'react-redux';
-import { toggleSettings } from 'src/actions';
+import { toggleSettings, login } from 'src/actions';
 import Settings from 'src/components/Settings';
 
 const mapStateToProps = (state) => ({
@@ -9,6 +10,10 @@ const mapDispatchToProps = (dispatch) => ({
   onClickButton: () => {
     const action = toggleSettings();
     dispatch(action);
+  },
+  onSubmitForm: (e) => {
+    e.preventDefault();
+    dispatch(login());
   },
 });
 
