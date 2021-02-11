@@ -1,0 +1,38 @@
+@use 'src/styles/vars' as v;
+
+.settings {
+  position: fixed;
+  transform: translateX(100%);
+  padding-top: v.$gutter;
+  padding-right: v.$gutter;
+  transition: transform 500ms;
+  right: 0;
+  width: 200px;
+  &--open {
+    transform: translateX(0);
+    .settings__button {
+      transform: rotate(45deg);
+    }
+  }
+  &__button {
+    position:absolute;
+    left: -40px;
+    border: none;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    color: v.$color-settings;
+    font-size: 1.5em;
+  }
+  &__input, &__submit{
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: v.$gutter / 2;
+    padding: .5rem;
+  }
+  &__submit{
+    background-color: v.$color-settings;
+    color: white;
+  }
+}

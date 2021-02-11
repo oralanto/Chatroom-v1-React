@@ -3,9 +3,10 @@
 .app {
   width: 90%;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   height: 100vh;
   background-color: v.$color-alt;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: space-between;
 }
