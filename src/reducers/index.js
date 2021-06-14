@@ -12,11 +12,11 @@ const initialState = {
     {
       id: 1,
       user: 'Super Chat',
-      message: 'Kikou',
+      message: 'Salut toi =D',
     },
   ],
   newMessage: '',
-  open: true,
+  open: false,
   user: {
     email: '',
     password: '',
@@ -34,7 +34,7 @@ const reducer = (state = initialState, action = {}) => {
     case ADD_MESSAGE: {
       const message = {
         id: getHighestId(state) + 1,
-        user: 'Osée',
+        user: 'Vous',
         message: state.newMessage,
       };
       const messages = [...state.messages, message];
