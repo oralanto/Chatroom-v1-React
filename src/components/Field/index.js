@@ -21,7 +21,7 @@ const Field = ({
       id={name}
       name={name}
       type={type}
-      placeholder="Email"
+      placeholder={name}
       className="field__input"
       value={inputValue}
       onChange={(e) => onChangeInputValue(e.target.value)}

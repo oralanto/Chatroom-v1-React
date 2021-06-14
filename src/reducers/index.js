@@ -3,6 +3,7 @@ import {
   ADD_MESSAGE,
   TOGGLE_SETTINGS,
   CHANGE_INPUT_VALUE,
+  LOGIN,
 } from 'src/actions';
 import getHighestId from 'src/selectors';
 
@@ -56,14 +57,14 @@ const reducer = (state = initialState, action = {}) => {
           [action.name]: action.value,
         },
       };
-    // case LOGIN:
-    //   return {
-    //     ...state,
-    //     user: {
-    //       ...state.user,
-    //       [action.name]: action.value,
-    //     },
-    //   };
+    case LOGIN:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          [action.name]: action.value,
+        },
+      };
     default:
       return state;
   }
